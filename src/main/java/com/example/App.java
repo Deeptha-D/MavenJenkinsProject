@@ -2,19 +2,17 @@ package com.example;
 
 public class App {
 
-    public int add(int a, int b) {
-        return a + b;
-    }
+    public double calculateBill(int units) {
+        double bill = 0;
 
-    public int subtract(int a, int b) {
-        return a - b;
-    }
+        if (units <= 100) {
+            bill = units * 1.20;
+        } else if (units <= 300) {
+            bill = (100 * 1.20) + (units - 100) * 2.00;
+        } else {
+            bill = (100 * 1.20) + (200 * 2.00) + (units - 300) * 3.00;
+        }
 
-    public int multiply(int a, int b) {
-        return a * b;
-    }
-
-    public int divide(int a, int b) {
-        return a / b;
+        return bill;
     }
 }
