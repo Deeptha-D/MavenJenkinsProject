@@ -6,26 +6,30 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AppTest {
 
     @Test
-    void testAdd() {
-        App app = new App();
-        assertEquals(15, app.add(10, 5));
+    void testCalculateBillFirstSlab() {
+        App biller = new App();
+        
+        assertEquals(60.0, biller.calculateBill(50));
     }
 
     @Test
-    void testSubtract() {
-        App app = new App();
-        assertEquals(5, app.subtract(10, 5));
+    void testCalculateBillSecondSlab() {
+        App biller = new App();
+        
+        assertEquals(220.0, biller.calculateBill(150));
     }
 
     @Test
-    void testMultiply() {
-        App app = new App();
-        assertEquals(50, app.multiply(10, 5));
+    void testCalculateBillThirdSlab() {
+        App biller = new App();
+        
+        assertEquals(670.0, biller.calculateBill(350));
     }
 
     @Test
-    void testDivide() {
-        App app = new App();
-        assertEquals(2, app.divide(10, 5));
+    void testCalculateBillZeroUnits() {
+        App biller = new App();
+        assertEquals(0.0, biller.calculateBill(0));
     }
 }
+
