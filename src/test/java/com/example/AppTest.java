@@ -6,30 +6,32 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AppTest {
 
     @Test
-    void testCalculateBillFirstSlab() {
-        App biller = new App();
-        
-        assertEquals(60.0, biller.calculateBill(50));
+    void testGradeA() {
+        App app = new App();
+        assertEquals("A", app.calculateGrade(95));
     }
 
     @Test
-    void testCalculateBillSecondSlab() {
-        App biller = new App();
-        
-        assertEquals(220.0, biller.calculateBill(150));
+    void testGradeB() {
+        App app = new App();
+        assertEquals("B", app.calculateGrade(82));
     }
 
     @Test
-    void testCalculateBillThirdSlab() {
-        App biller = new App();
-        
-        assertEquals(670.0, biller.calculateBill(350));
+    void testGradeC() {
+        App app = new App();
+        assertEquals("C", app.calculateGrade(75));
     }
 
     @Test
-    void testCalculateBillZeroUnits() {
-        App biller = new App();
-        assertEquals(0.0, biller.calculateBill(0));
+    void testGradeD() {
+        App app = new App();
+        assertEquals("D", app.calculateGrade(60));
+    }
+
+    @Test
+    void testGradeF() {
+        App app = new App();
+        assertEquals("F", app.calculateGrade(45));
     }
 }
-
