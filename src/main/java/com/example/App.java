@@ -2,17 +2,21 @@ package com.example;
 
 public class App {
 
-    public double calculateBill(int units) {
-        double bill = 0;
+    public String calculateGrade(int score) {
+        String grade;
 
-        if (units <= 100) {
-            bill = units * 1.20;
-        } else if (units <= 300) {
-            bill = (100 * 1.20) + (units - 100) * 2.00;
+        if (score >= 90) {
+            grade = "A";
+        } else if (score >= 80) {
+            grade = "B";
+        } else if (score >= 70) {
+            grade = "C";
+        } else if (score >= 60) {
+            grade = "D";
         } else {
-            bill = (100 * 1.20) + (200 * 2.00) + (units - 300) * 3.00;
+            grade = "F";
         }
 
-        return bill;
+        return grade;
     }
 }
